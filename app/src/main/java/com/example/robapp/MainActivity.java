@@ -30,10 +30,6 @@ public class MainActivity extends AppCompatActivity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //angleTextView = (TextView) findViewById(R.id.angleTextView);
-        //powerTextView = (TextView) findViewById(R.id.powerTextView);
-        //directionTextView = (TextView) findViewById(R.id.directionTextView);
         joystick = (JoystickView) findViewById(R.id.joystickView);
         status_battery = (TextView) findViewById(R.id.status_bat);
         Thread myTread = new Thread(new robotToApp());
