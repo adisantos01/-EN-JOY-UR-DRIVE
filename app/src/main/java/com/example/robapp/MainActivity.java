@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onValueChanged(int angle, int power, int direction) {
                 // TODO Auto-generated method stub
-                angleTextView.setText(" " + String.valueOf(angle) + "°");
-                powerTextView.setText(" " + String.valueOf(power) + "%");
+                //angleTextView.setText(" " + String.valueOf(angle) + "°");
+                //powerTextView.setText(" " + String.valueOf(power) + "%");
 
                 angulo=(360-angle)+90;
                 if(angulo>360){angulo=angulo-360;}
@@ -155,12 +155,7 @@ public class MainActivity extends AppCompatActivity{
         public void run() {
             try {
                 ss=new ServerSocket(8010);
-                h.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        status_battery.setText("80%");
-                    }
-                });
+
                 ciclo = 0;
                 while(true) {
                     ciclo = ciclo + 1;
@@ -204,12 +199,7 @@ public class MainActivity extends AppCompatActivity{
                             string_bat = "Bateria a 0%";
                         }
 
-                        h.post(new Runnable() {
-                            @Override
-                            public void run() {
-                                status_battery.setText(mensagem + "   " + ciclo);
-                            }
-                        });
+
                     }
 
                     //compõe string para enviar
@@ -251,7 +241,7 @@ public class MainActivity extends AppCompatActivity{
                     h.post(new Runnable() {
                         @Override
                         public void run() {
-                            status_battery.setText(message_to_robot);
+                            status_battery.setText(string_bat);
                         }
                     });
 

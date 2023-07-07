@@ -14,6 +14,11 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/d2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
             android:id="@+id/nome_app"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,10 +31,20 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"/>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
         <com.example.robapp.JoystickView
             android:id="@+id/joystickView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
         <TextView
             android:id="@+id/status"
@@ -38,17 +53,22 @@
             android:visibility="gone" />
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Status Battery"
-            android:gravity="center"/>
-
-        <TextView
             android:id="@+id/status_bat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/dd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Universidade da Beira Interior"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 
