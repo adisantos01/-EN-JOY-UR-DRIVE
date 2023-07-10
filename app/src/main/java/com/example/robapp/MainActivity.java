@@ -169,7 +169,6 @@ public class MainActivity extends AppCompatActivity{
                             conta = conta + 1;
                         }
 
-                        //falta validar a string verificando o checksum
 
                         //recolhe o byte que troca para avaliar a qualidade da comunicação
                         ch = mensagem.charAt(conta + 1);
@@ -199,8 +198,6 @@ public class MainActivity extends AppCompatActivity{
                     }
 
                     //compõe string para enviar
-
-
                     //concatenar string a enviar para o robot
                     message_to_robot = "S" + front_back + right_left + "AA";
 
