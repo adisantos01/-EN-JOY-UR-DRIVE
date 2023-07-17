@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity{
     private TextView directionTextView;
     private JoystickView joystick;
     private TextView status_battery;
-    //private TextView status;
     int angulo;
     double seno, cosseno, rad;
     String front_back="F", right_left ="D", message_to_robot = "S";
@@ -34,8 +33,6 @@ public class MainActivity extends AppCompatActivity{
         status_battery = (TextView) findViewById(R.id.status_bat);
         Thread myTread = new Thread(new robotToApp());
         myTread.start();
-        //status = (TextView) findViewById(R.id.status);
-
 
         joystick.setOnJoystickMoveListener(new JoystickView.OnJoystickMoveListener() {
 
@@ -97,8 +94,6 @@ public class MainActivity extends AppCompatActivity{
         }, JoystickView.DEFAULT_LOOP_INTERVAL);
     }
 
-
-
     //enviar para o robot os comandos
     class goToServer extends AsyncTask<String,Void,Void>
     {
@@ -146,7 +141,6 @@ public class MainActivity extends AppCompatActivity{
         int soma_para_check;
         long ciclo;
 
-        Boolean string_recebida_validada;
         @Override
         public void run() {
             try {
@@ -168,7 +162,6 @@ public class MainActivity extends AppCompatActivity{
                         while (mensagem.charAt(conta) != 'C') {
                             conta = conta + 1;
                         }
-
 
                         //recolhe o byte que troca para avaliar a qualidade da comunicação
                         ch = mensagem.charAt(conta + 1);
